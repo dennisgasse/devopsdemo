@@ -1,0 +1,30 @@
+{
+    "name": "vmx-HUB",
+    "id": "/subscriptions/82b46aa3-2ef8-4455-8a3e-609eda8727d4/resourceGroups/RG-SDWAN/providers/Microsoft.Network/virtualHubs/vmx-HUB",
+    "etag": "W/\"2504e083-d7c6-41b1-91c7-104355711e79\"",
+    "type": "Microsoft.Network/virtualHubs",
+    "location": "westeurope",
+    "tags": {
+        "CostCenter": "RG-TAG"
+    },
+    "properties": {
+        "provisioningState": "Succeeded",
+        "virtualHubRouteTableV2s": [],
+        "addressPrefix": "172.16.4.0/24",
+        "virtualRouterAsn": 65515,
+        "virtualRouterIps": [
+            "172.16.4.69",
+            "172.16.4.68"
+        ],
+        "routeTable": {
+            "routes": []
+        },
+        "virtualWan": {
+            "id": "/subscriptions/82b46aa3-2ef8-4455-8a3e-609eda8727d4/resourceGroups/RG-SDWAN/providers/Microsoft.Network/virtualWans/vWAN-vMX"
+        },
+        "sku": "Standard",
+        "routingState": "Provisioned",
+        "allowBranchToBranchTraffic": false,
+        "preferredRoutingGateway": "ExpressRoute"
+    }
+}

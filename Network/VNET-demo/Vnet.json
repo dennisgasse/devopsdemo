@@ -1,0 +1,57 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "VnetName": {
+            "type": "string",
+            "defaultValue": "VNet-vMX",
+            "metadata": {
+                "description": "Virtual Network Name"
+            }
+        },
+        "Axians-Demo": {
+            "type": "string",
+            "defaultValue": "12345",
+            "metadata": {
+                "description": "Cost Center IO number for cross billing"
+            }
+        },
+        "OwnerName": {
+            "type": "string",
+            "defaultValue": "Dennis Gasse",
+            "metadata": {
+                "description": "Name of the stakeholder responsible for this resource"
+            }
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "apiVersion": "2018-10-01",
+            "type": "Microsoft.Network/virtualNetworks",
+            "name": "[parameters('VnetName')]",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "CostCenter": "[parameters('Axians-Demo')]",
+                "Owner": "[parameters('OwnerName')]"
+            },
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "172.16.2.0/24"
+                    ]
+                },
+                "enableVmProtection": false,
+                "enableDdosProtection": false,
+                "subnets": [
+                    {
+                        "name": "vMXsubnet01",
+                        "properties": {
+                            "addressPrefix": "172.16.2.0/24"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

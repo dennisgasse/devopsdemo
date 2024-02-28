@@ -1,0 +1,29 @@
+{
+    "name": "Hub-01",
+    "id": "/subscriptions/82b46aa3-2ef8-4455-8a3e-609eda8727d4/resourceGroups/github/providers/Microsoft.Network/virtualHubs/Hub-01",
+    "etag": "W/\"a74d6380-cf1c-49fe-8bb6-8fd4b7509687\"",
+    "type": "Microsoft.Network/virtualHubs",
+    "location": "westeurope",
+    "tags": {
+        "CostCenter": "RG-TAG"
+    },
+    "properties": {
+        "provisioningState": "Succeeded",
+        "virtualHubRouteTableV2s": [],
+        "addressPrefix": "10.1.0.0/16",
+        "virtualRouterAsn": 65515,
+        "virtualRouterIps": [],
+        "routeTable": {
+            "routes": []
+        },
+        "virtualWan": {
+            "id": "/subscriptions/82b46aa3-2ef8-4455-8a3e-609eda8727d4/resourceGroups/github/providers/Microsoft.Network/virtualWans/VWan-01"
+        },
+        "azureFirewall": {
+            "id": "/subscriptions/82b46aa3-2ef8-4455-8a3e-609eda8727d4/resourceGroups/github/providers/Microsoft.Network/azureFirewalls/AzfwTest"
+        },
+        "routingState": "Provisioning",
+        "allowBranchToBranchTraffic": false,
+        "preferredRoutingGateway": "ExpressRoute"
+    }
+}
